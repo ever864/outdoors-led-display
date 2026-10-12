@@ -1,6 +1,25 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-led-display.jpg";
 
+const LED_COLORS = ["text-led-orange", "text-neon-green", "text-primary", "text-electric-cyan"];
+
+const BrandWord = ({ text, startIndex }: { text: string; startIndex: number }) => (
+  <span className="inline-flex whitespace-nowrap">
+    {text.split("").map((char, index) => {
+      const position = startIndex + index;
+      return (
+        <span
+          key={position}
+          className={`inline-block animate-neon-blink ${LED_COLORS[position % LED_COLORS.length]}`}
+          style={{ animationDelay: `${(position * 0.1 + 0.1).toFixed(1)}s` }}
+        >
+          {char}
+        </span>
+      );
+    })}
+  </span>
+);
+
 export const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -16,34 +35,27 @@ export const HeroSection = () => {
         <img
           src={heroImage}
           alt="Pantalla LED instalada en edificio corporativo"
-          className="w-full h-full object-cover opacity-80"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
+        <div className="absolute inset-0 bg-gradient-hero opacity-70"></div>
       </div>
 
       {/* Hero Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto animate-fade-in">
           <div className="text-center">
-            <h2 className="font-display text-2xl md:text-5xl font-bold tracking-wider">
-              <span className="inline-block text-led-orange animate-neon-blink" style={{ animationDelay: '0.1s' }}>O</span>
-              <span className="inline-block text-neon-green animate-neon-blink" style={{ animationDelay: '0.2s' }}>U</span>
-              <span className="inline-block text-primary animate-neon-blink" style={{ animationDelay: '0.3s' }}>T</span>
-              <span className="inline-block text-electric-cyan animate-neon-blink" style={{ animationDelay: '0.4s' }}>D</span>
-              <span className="inline-block text-led-orange animate-neon-blink" style={{ animationDelay: '0.5s' }}>O</span>
-              <span className="inline-block text-neon-green animate-neon-blink" style={{ animationDelay: '0.6s' }}>R</span>
-              <span className="mx-4 text-foreground">•</span>
-              <span className="inline-block text-primary animate-neon-blink" style={{ animationDelay: '0.7s' }}>L</span>
-              <span className="inline-block text-electric-cyan animate-neon-blink" style={{ animationDelay: '0.8s' }}>E</span>
-              <span className="inline-block text-led-orange animate-neon-blink" style={{ animationDelay: '0.9s' }}>D</span>
-              <span className="mx-4 text-foreground">•</span>
-              <span className="inline-block text-primary animate-neon-blink" style={{ animationDelay: '1.0s' }}>D</span>
-              <span className="inline-block text-electric-cyan animate-neon-blink" style={{ animationDelay: '1.1s' }}>I</span>
-              <span className="inline-block text-led-orange animate-neon-blink" style={{ animationDelay: '1.2s' }}>S</span>
-              <span className="inline-block text-neon-green animate-neon-blink" style={{ animationDelay: '1.3s' }}>P</span>
-              <span className="inline-block text-primary animate-neon-blink" style={{ animationDelay: '1.4s' }}>L</span>
-              <span className="inline-block text-electric-cyan animate-neon-blink" style={{ animationDelay: '1.5s' }}>A</span>
-              <span className="inline-block text-led-orange animate-neon-blink" style={{ animationDelay: '1.6s' }}>Y</span>
+            <h2 className="font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-wider">
+              <span className="sr-only">OUTDOOR LED DISPLAY</span>
+              <span
+                aria-hidden="true"
+                className="flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4 md:gap-x-6 gap-y-2"
+              >
+                <BrandWord text="OUTDOOR" startIndex={0} />
+                <span className="text-foreground">•</span>
+                <BrandWord text="LED" startIndex={7} />
+                <span className="text-foreground">•</span>
+                <BrandWord text="DISPLAY" startIndex={10} />
+              </span>
             </h2>
             <p className="text-muted-foreground font-tech text-sm md:text-base mt-4 tracking-widest">
               SOLUCIONES VISUALES DE IMPACTO
