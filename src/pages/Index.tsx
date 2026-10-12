@@ -1,6 +1,5 @@
 import { Header } from "@/components/ui/header";
 import { HeroSection } from "@/components/ui/hero-section";
-import { LEDSignText } from "@/components/ui/led-sign-text";
 import { ProblemSolution } from "@/components/ui/problem-solution";
 import { ProjectsGallery } from "@/components/ui/projects-gallery";
 import { BenefitsSection } from "@/components/ui/benefits-section";
