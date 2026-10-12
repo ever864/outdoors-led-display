@@ -188,3 +188,18 @@
     animation: neon-blink 2s ease-in-out infinite;
   }
 }
+
+/* Respect the user's motion preferences (placed after utilities so it wins the cascade) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-neon-blink,
+  .animate-float,
+  .animate-bounce,
+  .animate-pulse,
+  .animate-glow-pulse {
+    animation: none;
+  }
+}
