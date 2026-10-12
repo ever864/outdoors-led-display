@@ -2,6 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Monitor, Lightbulb, Building, Calendar } from "lucide-react";
 
 export const ProductsSection = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const products = [
     {
       icon: <Monitor className="w-12 h-12 text-electric-cyan" />,
@@ -13,8 +20,7 @@ export const ProductsSection = () => {
         "Resistencia IP65/IP67",
         "Control remoto total"
       ],
-      applications: ["Fachadas comerciales", "Vallas publicitarias", "Estadios", "Centros comerciales"],
-      ctaText: "Ver Especificaciones"
+      applications: ["Fachadas comerciales", "Vallas publicitarias", "Estadios", "Centros comerciales"]
     },
     {
       icon: <Lightbulb className="w-12 h-12 text-led-orange" />,
@@ -26,8 +32,7 @@ export const ProductsSection = () => {
         "Gestión de contenido CMS",
         "Instalación profesional"
       ],
-      applications: ["Restaurantes", "Tiendas retail", "Oficinas corporativas", "Centros médicos"],
-      ctaText: "Diseñar mi Letrero"
+      applications: ["Restaurantes", "Tiendas retail", "Oficinas corporativas", "Centros médicos"]
     },
     {
       icon: <Building className="w-12 h-12 text-neon-green" />,
@@ -39,8 +44,7 @@ export const ProductsSection = () => {
         "Control de iluminación avanzado",
         "Diseño sustentable"
       ],
-      applications: ["Torres corporativas", "Hoteles de lujo", "Centros culturales", "Edificios gubernamentales"],
-      ctaText: "Consultar Proyecto"
+      applications: ["Torres corporativas", "Hoteles de lujo", "Centros culturales", "Edificios gubernamentales"]
     },
     {
       icon: <Calendar className="w-12 h-12 text-tech-blue" />,
@@ -52,8 +56,7 @@ export const ProductsSection = () => {
         "Transporte especializado",
         "Soporte técnico en sitio"
       ],
-      applications: ["Eventos corporativos", "Conciertos", "Ferias comerciales", "Activaciones de marca"],
-      ctaText: "Cotizar Evento"
+      applications: ["Eventos corporativos", "Conciertos", "Ferias comerciales", "Activaciones de marca"]
     }
   ];
 
@@ -108,7 +111,7 @@ export const ProductsSection = () => {
               </div>
 
               {/* Applications */}
-              <div className="mb-8">
+              <div>
                 <h4 className="font-display text-lg font-semibold text-foreground mb-4">
                   Aplicaciones Ideales
                 </h4>
@@ -123,14 +126,6 @@ export const ProductsSection = () => {
                   ))}
                 </div>
               </div>
-
-              {/* CTA */}
-              <Button
-                variant="outline"
-                className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground font-tech"
-              >
-                {product.ctaText}
-              </Button>
             </div>
           ))}
         </div>
@@ -145,14 +140,13 @@ export const ProductsSection = () => {
               Especializamos en soluciones completamente personalizadas. Nuestro equipo de ingenieros puede diseñar
               y fabricar la solución LED perfecta para tu proyecto específico, sin importar qué tan único sea.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="cta" className="font-tech">
-                Solicitar Solución Personalizada
-              </Button>
-              <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-tech">
-                Hablar con un Especialista
-              </Button>
-            </div>
+            <Button
+              variant="cta"
+              className="font-tech"
+              onClick={() => scrollToSection("contact")}
+            >
+              Solicitar Solución Personalizada
+            </Button>
           </div>
         </div>
       </div>

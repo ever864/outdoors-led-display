@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import projectRetail from "@/assets/project-retail.jpg";
 import projectEvents from "@/assets/project-events.jpg";
 import projectRestaurant from "@/assets/project-restaurant.jpg";
-import placeholder from "/placeholder.svg";
 
 export const ProjectsGallery = () => {
   const [activeFilter, setActiveFilter] = useState("todos");
@@ -32,37 +31,12 @@ export const ProjectsGallery = () => {
       image: projectRestaurant,
       description: "Letrero LED interior para menú dinámico y promociones",
       tech: "LED P4, Interior, Gestión de Contenido CMS"
-    },
-    {
-      id: 4,
-      title: "Torre Corporativa - Fachada LED",
-      category: "corporativo",
-      image: placeholder,
-      description: "Pantalla LED gigante de 200m² en fachada de edificio",
-      tech: "LED P10, Exterior IP65, Brillo 8000cd/m²"
-    },
-    {
-      id: 5,
-      title: "Centro de Convenciones",
-      category: "eventos",
-      image: placeholder,
-      description: "Sistema LED modular para múltiples configuraciones",
-      tech: "LED P2.9, Ultra Liviano, Setup Rápido"
-    },
-    {
-      id: 6,
-      title: "Cadena de Retail - Señalización",
-      category: "retail",
-      image: placeholder,
-      description: "Red de pantallas LED sincronizadas en múltiples ubicaciones",
-      tech: "LED P6, Red Distribuida, Gestión Centralizada"
     }
   ];
 
   const filters = [
     { id: "todos", label: "Todos los Proyectos" },
     { id: "retail", label: "Retail" },
-    { id: "corporativo", label: "Corporativo" },
     { id: "eventos", label: "Eventos" },
     { id: "restaurantes", label: "Restaurantes" }
   ];
@@ -131,19 +105,9 @@ export const ProjectsGallery = () => {
                 <p className="text-muted-foreground font-tech">
                   {project.description}
                 </p>
-                
-                <Button variant="link" className="mt-4 p-0 text-primary font-tech">
-                  Ver detalles del proyecto →
-                </Button>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Button variant="outline" size="lg" className="font-tech">
-            Ver Todos Nuestros Proyectos
-          </Button>
         </div>
       </div>
     </section>
