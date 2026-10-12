@@ -199,7 +199,10 @@
   .animate-float,
   .animate-bounce,
   .animate-pulse,
-  .animate-glow-pulse {
+  .animate-glow-pulse,
+  .animate-fade-in,
+  .animate-slide-in-left,
+  .animate-slide-in-right {
     animation: none;
   }
 }
