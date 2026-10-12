@@ -11,8 +11,8 @@ export const BenefitsSection = () => {
     {
       icon: <Shield className="w-12 h-12 text-neon-green" />,
       title: "Durabilidad y Resistencia",
-      description: "Fabricados para resistir las condiciones más exigentes. Garantía extendida respaldada por calidad.",
-      features: ["Resistencia IP65", "Garantía 5 años", "Mantenimiento mínimo"]
+      description: "Fabricados para resistir las condiciones más exigentes en espacios exteriores.",
+      features: ["Resistencia IP65", "Mantenimiento mínimo", "Uso en exteriores"]
     },
     {
       icon: <Smartphone className="w-12 h-12 text-led-orange" />,
@@ -23,8 +23,8 @@ export const BenefitsSection = () => {
     {
       icon: <Headphones className="w-12 h-12 text-tech-blue" />,
       title: "Asesoramiento Personalizado",
-      description: "Te acompañamos desde la idea inicial hasta la instalación y post-venta. Soporte técnico 24/7.",
-      features: ["Consultoría gratuita", "Instalación profesional", "Soporte continuo"]
+      description: "Te acompañamos desde la idea inicial hasta la instalación y la post-venta.",
+      features: ["Asesoría inicial", "Instalación profesional", "Acompañamiento post-venta"]
     }
   ];
 
@@ -37,7 +37,7 @@ export const BenefitsSection = () => {
             <span className="bg-gradient-electric bg-clip-text text-transparent"> Soluciones Visuales?</span>
           </h2>
           <p className="font-tech text-xl text-muted-foreground max-w-3xl mx-auto">
-            Más de 10 años de experiencia creando instalaciones que superan expectativas y generan resultados medibles.
+            Tecnología LED, durabilidad y acompañamiento en cada etapa de tu proyecto.
           </p>
         </div>
 

@@ -26,9 +26,9 @@ export const ProcessSection = () => {
     {
       number: "04",
       icon: <ShieldCheck className="w-8 h-8" />,
-      title: "Soporte y Garantía",
-      description: "Capacitación completa, soporte técnico continuo y garantía extendida para tu tranquilidad.",
-      details: ["Capacitación incluida", "Soporte 24/7", "Garantía 5 años"]
+      title: "Soporte y Acompañamiento",
+      description: "Capacitación completa, soporte técnico y acompañamiento post-venta para tu tranquilidad.",
+      details: ["Capacitación incluida", "Soporte técnico", "Acompañamiento post-venta"]
     }
   ];
 

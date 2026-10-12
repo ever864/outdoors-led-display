@@ -20,7 +20,6 @@ export const Header = () => {
     { label: "Beneficios", href: "benefits" },
     { label: "Productos", href: "products" },
     { label: "Proceso", href: "process" },
-    { label: "Testimonios", href: "testimonials" },
     { label: "Contacto", href: "contact" },
   ];
 

@@ -6,9 +6,7 @@ import { ProjectsGallery } from "@/components/ui/projects-gallery";
 import { BenefitsSection } from "@/components/ui/benefits-section";
 import { ProductsSection } from "@/components/ui/products-section";
 import { ProcessSection } from "@/components/ui/process-section";
-import { TestimonialsSection } from "@/components/ui/testimonials-section";
 import { CTASection } from "@/components/ui/cta-section";
-import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import { Footer } from "@/components/ui/footer";
 
 const Index = () => {
@@ -29,14 +27,10 @@ const Index = () => {
         <ProductsSection />
       </div>
       <ProcessSection />
-      <div id="testimonials">
-        <TestimonialsSection />
-      </div>
       <div id="contact">
         <CTASection />
       </div>
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 };

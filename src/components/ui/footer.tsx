@@ -1,5 +1,3 @@
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-
 export const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -13,13 +11,6 @@ export const Footer = () => {
     { label: "Soluciones", href: "problem-solution" },
     { label: "Proyectos", href: "projects" },
     { label: "Contacto", href: "contact" },
-  ];
-
-  const socialLinks = [
-    { icon: <Facebook size={20} />, href: "#" },
-    { icon: <Twitter size={20} />, href: "#" },
-    { icon: <Instagram size={20} />, href: "#" },
-    { icon: <Linkedin size={20} />, href: "#" },
   ];
 
   return (
@@ -57,25 +48,18 @@ export const Footer = () => {
             </nav>
           </div>
 
-          {/* Social Media and Contact */}
+          {/* Contact */}
           <div>
-            <h3 className="font-display text-lg font-semibold text-foreground mb-4">Síguenos</h3>
-            <div className="flex space-x-4 mb-6">
-              {socialLinks.map((social, index) => (
-                <a 
-                  key={index} 
-                  href={social.href} 
-                  className="text-muted-foreground hover:text-electric-cyan transition-colors duration-200"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
-            <p className="font-tech text-sm text-muted-foreground">
-              <a href="mailto:ventas@ledvisionpro.com" className="hover:text-electric-cyan transition-colors">ventas@ledvisionpro.com</a>
+            <h3 className="font-display text-lg font-semibold text-foreground mb-4">Contacto</h3>
+            <p className="font-tech text-sm text-muted-foreground mb-4">
+              Estamos habilitando nuestros canales de contacto oficiales. Por ahora, escríbenos desde el formulario de cotización.
             </p>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="font-tech text-sm text-electric-cyan hover:text-primary transition-colors duration-200"
+            >
+              Ir al formulario de contacto →
+            </button>
           </div>
         </div>
 
